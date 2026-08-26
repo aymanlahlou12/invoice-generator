@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Invoice Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Invoice Generator</h1>
+  <div class="form-section" style="margin-bottom:15px;">
+  <label>Invoice #</label>
+  <input type="text" id="invoiceNumber" placeholder="INV-0001">
+
+  <label>Invoice Date</label>
+  <input type="date" id="invoiceDate">
+
+  <label>Due Date</label>
+  <input type="date" id="dueDate">
+  </div>
+
+  <div class="form-section">
+    <h2>Your Business</h2>
+    <input type="text" id="businessName" placeholder="Business Name">
+    <input type="text" id="businessEmail" placeholder="Email">
+
+    <h2>Client</h2>
+    <input type="text" id="clientName" placeholder="Client Name">
+    <input type="text" id="clientEmail" placeholder="Client Email">
+
+    <h2>Items</h2>
+    <table id="itemsTable">
+      <thead>
+  <tr>
+    <th>Description</th>
+    <th>Qty</th>
+    <th>Price</th>
+    <th>Total</th>
+    <th></th>
+  </tr>
+</thead>
+      <tbody>
+        <!-- rows added here by JS -->
+      </tbody>
+    </table>
+    <button id="addItemBtn">+ Add Item</button>
+
+    <h3>Grand Total: $<span id="grandTotal">0.00</span></h3>
+
+<button id="downloadBtn">Download PDF</button>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="script.js"></script>
+</html>
